@@ -1,6 +1,8 @@
+#	-Dntp-servers="" \
+#
+
 EXTRA_OEMESON_append += ' \
 	-Ddns-servers="" \
-	-Dntp-servers="" \
 	'
 
 do_install_append() {
