@@ -1,0 +1,13 @@
+[Unit]
+Description=Tangorc Service
+Requires=network-online.target local-fs.target
+After=network-online.target
+Conflicts=shutdown.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/tangorc.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
