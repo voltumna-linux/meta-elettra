@@ -1,14 +1,13 @@
 DESCRIPTION = "Pogo is the TANGO code generator. It allows to define a TANGO class model."
-# HOMEPAGE = "https://github.com/tango-controls/pogo"
+HOMEPAGE = "https://gitlab.com/tango-controls/pogo"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/GPL-3.0;md5=c79ff39f19dfec6d293b95dea7b07891"
 
 SRC_URI = " \
-	file://Pogo-${PV}.jar;unpack=0 \
+	https://repo1.maven.org/maven2/org/tango-controls/Pogo/${PV}/Pogo-${PV}.jar;unpack=0 \
 	file://pogo \
 "
-#SRC_URI[md5sum] = "cca4e8f1087305b61e5d2ed4850f0bab"
-#SRC_URI[sha256sum] = "f7901de1942233e59db078fa35ea48b80192b412b24435904b0a7893fbdcaeb3"
+SRC_URI[sha256sum] = "6c590553a061f92b192d78df2427178b1e4da303cbf887ed25735a2d0366acc5"
 
 FILES_${PN} += "${SDKPATHNATIVE}"
 do_install() {
