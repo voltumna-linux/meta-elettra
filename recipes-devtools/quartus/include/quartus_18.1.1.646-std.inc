@@ -13,7 +13,7 @@ install_quartus_into_sdk() {
 	__EOF__
 }
 
-install_quartus_into_sdk_sdkmingw32() {
+install_quartus_into_sdk:sdkmingw32() {
 	install -d ${SDK_OUTPUT}${SDKPATHNATIVE}/opt/
 	tar zxf ${DL_DIR}/intel-quartus_${QUARTUSVER}-windows.tar.gz -C ${SDK_OUTPUT}${SDKPATHNATIVE}/opt/
 

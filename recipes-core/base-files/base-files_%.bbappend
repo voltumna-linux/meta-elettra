@@ -1,6 +1,6 @@
-FILES_${PN} += "/runtime"
+FILES:${PN} += "/runtime"
 
-do_install_append() {
+do_install:append() {
 	# Add mountpoint for shared binaries
 	mkdir ${D}/runtime
 }
