@@ -2,10 +2,11 @@ DESCRIPTION = "This recipe adds users to an image"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
-DEPENDS += "starter"
+DEPENDS:append = "bash systemd"
 
 USERADD_PACKAGES = "${PN}"
 USERADD_PARAM_${PN} = " \
+	--uid 10000 --user-group --groups dialout --no-create-home --home-dir / --shell /bin/nologin controls; \
 	--uid 11000 --groups controls,dialout --no-create-home --home-dir /home/lorenzo.pivetta --shell /bin/bash lorenzo.pivetta; \
 	--uid 11001 --groups controls,dialout --no-create-home --home-dir /home/alessio.bogani --shell /bin/bash alessio.bogani; \
 	--uid 11002 --groups controls,dialout --no-create-home --home-dir /home/giulio.gaio --shell /bin/bash giulio.gaio; \
