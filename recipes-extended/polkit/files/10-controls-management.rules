@@ -1,0 +1,16 @@
+/*
+ * These are necessary to let controls' group members to manage starter unit
+ */
+
+polkit.addRule(function(action, subject) {
+	if (action.id == "org.freedesktop.login1.set-wall-message") {
+		return polkit.Result.YES;
+	}
+	if (subject.isInGroup("controls")) {
+		if (action.id == "org.freedesktop.systemd1.manage-units" ||
+				action.id == "org.freedesktop.systemd1.manage-unit-files") {
+			return polkit.Result.YES;
+		}
+	}
+	return polkit.Result.NO;
+});
