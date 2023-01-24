@@ -1,1 +1,1 @@
-export SDKTARGETSYSROOT="/"
+export SDKTARGETSYSROOT=""
