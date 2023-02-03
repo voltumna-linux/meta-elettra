@@ -19,7 +19,7 @@ do_install_append() {
 	install -m 0644 ${WORKDIR}/tangorc.service ${D}${systemd_unitdir}/system
 
 	install -d ${D}${sysconfdir}/profile.d
-	ln -sfr {D}/run/tango/tangorc ${D}${sysconfdir}/tangorc
+	ln -sfr ${D}/run/tango/tangorc ${D}${sysconfdir}/tangorc
 	ln -sfr ${D}/run/tango/corba.sh ${D}${sysconfdir}/profile.d/corba.sh
 }
 
