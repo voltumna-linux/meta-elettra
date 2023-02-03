@@ -1,7 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 SRC_URI_append += "file://tangorc.service \
-		file://tango.sh \
 		file://tangorc.sh \
 		"
 
@@ -20,9 +19,8 @@ do_install_append() {
 	install -m 0644 ${WORKDIR}/tangorc.service ${D}${systemd_unitdir}/system
 
 	install -d ${D}${sysconfdir}/profile.d
-	install -m 0644 ${WORKDIR}/tango.sh ${D}${sysconfdir}/profile.d/tango.sh
-	lnr ${D}/run/tango/tangorc ${D}${sysconfdir}/tangorc
-	lnr ${D}/run/tango/corba.sh ${D}${sysconfdir}/profile.d/corba.sh
+	ln -sfr {D}/run/tango/tangorc ${D}${sysconfdir}/tangorc
+	ln -sfr ${D}/run/tango/corba.sh ${D}${sysconfdir}/profile.d/corba.sh
 }
 
 inherit systemd
