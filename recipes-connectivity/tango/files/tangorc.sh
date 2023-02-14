@@ -5,7 +5,7 @@ mkdir -p /run/tango
 IPADDRESS=$(networkctl status @ETH@ | sed -ne 's/^[[:space:]]*Address:[[:space:]]*\([0-9.]*\).*/\1/p')
 
 case $(echo $IPADDRESS | cut -d"." -f3) in
-		204)     TANGO_HOST=tom.ecs.elettra.trieste.it:20000;;
+		204|213) TANGO_HOST=srv-tango-sre-01.ecs.elettra.trieste.it:20000;;
 		226)     TANGO_HOST=srv-tango-laser-01.fcs.elettra.trieste.it:20000;;
 		227)     TANGO_HOST=srv-tango-mag-01.fcs.elettra.trieste.it:20000;;
 		228)     TANGO_HOST=srv-tango-tf-01.fcs.elettra.trieste.it:20000;;
