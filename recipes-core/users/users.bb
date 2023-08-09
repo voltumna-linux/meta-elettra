@@ -20,6 +20,8 @@ USERADD_PARAM:${PN} = " \
 		--home-dir /home/claudio.scafuri --shell /bin/bash claudio.scafuri; \
 	--uid 11005 --groups controls,dialout --no-create-home \
 		--home-dir /home/alessandro.abrami --shell /bin/bash alessandro.abrami; \
+	--uid 11006 --groups controls,dialout --no-create-home \
+		--home-dir /home/martin.scarcia --shell /bin/bash martin.scarcia; \
 	"
 
 # Prevents do_package failures with:
