@@ -20,3 +20,4 @@ esac
 
 echo TANGO_HOST=$TANGO_HOST > /run/tango/tangorc
 echo export ORBendPoint=giop:tcp:$IPADDRESS: > /run/tango/corba.sh
+echo ORBendPoint=giop:tcp:$IPADDRESS: > /run/tango/corba
