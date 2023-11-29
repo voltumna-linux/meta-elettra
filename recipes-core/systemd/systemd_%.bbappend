@@ -2,6 +2,7 @@ EXTRA_OEMESON:append = ' \
 	-Ddns-servers="" \
 	'
 
+do_install[vardeps] += "PRIMARY_NETIF"
 do_install:append() {
 	# Replace wheel with controls group to let it views logs
 	sed -i 's/wheel/controls/g' ${D}${base_libdir}/tmpfiles.d/systemd.conf

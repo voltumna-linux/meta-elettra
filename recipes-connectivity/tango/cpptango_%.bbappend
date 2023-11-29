@@ -8,12 +8,12 @@ SYSTEMD_SERVICE:${PN} += "tangorc.service"
 
 FILES:${PN} += "${bindir} ${systemd_unitdir} ${sysconfdir}"
 
+do_install[vardeps] += "PRIMARY_NETIF"
 do_install:append() {
-	sed -i -e "s,@ETH@,${@d.getVar('PRIMARY_NETIF')},g" \
-		${WORKDIR}/tangorc.sh
-
 	install -d ${D}${bindir}
 	install -m 0755 ${WORKDIR}/tangorc.sh ${D}${bindir}
+	sed -i -e "s,@ETH@,${@d.getVar('PRIMARY_NETIF')},g" \
+		${D}${bindir}/tangorc.sh
 
 	install -d ${D}${systemd_unitdir}/system
 	install -m 0644 ${WORKDIR}/tangorc.service ${D}${systemd_unitdir}/system
