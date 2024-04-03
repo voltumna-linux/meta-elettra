@@ -1,0 +1,1 @@
+KERNEL=="hpet",GROUP="controls", MODE="0660"

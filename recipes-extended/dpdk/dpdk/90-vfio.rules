@@ -1,0 +1,2 @@
+KERNEL=="vfio",GROUP="controls", MODE="0666"
+SUBSYSTEM=="vfio",GROUP="controls", MODE="0666"
