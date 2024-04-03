@@ -2,6 +2,11 @@ EXTRA_OEMESON:append = ' \
 	-Ddns-servers="" \
 	'
 
+USERADD_PARAM:${PN} += " \
+	--uid 10000 --user-group --groups dialout --no-create-home \
+	--home-dir / --shell /bin/nologin controls; \
+	"
+
 do_install[vardeps] += "PRIMARY_NETIF"
 do_install:append() {
 	# Replace wheel with controls group to let it views logs
