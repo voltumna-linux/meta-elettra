@@ -1,3 +1,5 @@
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+
 FILES:${PN} += "/runtime"
 
 do_install:append() {
