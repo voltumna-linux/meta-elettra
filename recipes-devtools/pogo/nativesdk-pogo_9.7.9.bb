@@ -12,8 +12,8 @@ SRC_URI[sha256sum] = "3c6dc44a944e7d491d58bc33020d1116f71924c9fa79d5d50a61c0c078
 FILES:${PN} = "${SDKPATHNATIVE}"
 do_install() {
 	install -d ${D}${SDKPATHNATIVE}/usr/share/esrf-pogo/ ${D}${SDKPATHNATIVE}/usr/bin
-	install -m 0644 ${WORKDIR}/Pogo-${PV}.jar ${D}${SDKPATHNATIVE}/usr/share/esrf-pogo/
-	install -m 0755 ${WORKDIR}/pogo ${D}${SDKPATHNATIVE}/usr/bin
+	install -m 0644 ${UNPACKDIR}/Pogo-${PV}.jar ${D}${SDKPATHNATIVE}/usr/share/esrf-pogo/
+	install -m 0755 ${UNPACKDIR}/pogo ${D}${SDKPATHNATIVE}/usr/bin
 }
 
 inherit nativesdk

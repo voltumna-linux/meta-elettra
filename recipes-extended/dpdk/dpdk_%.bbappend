@@ -8,6 +8,6 @@ SRC_URI:append = " \
 FILES:${PN} += "{sysconfdir}/udev/rules.d"
 do_install:append() {
  	install -d ${D}${sysconfdir}/udev/rules.d/
- 	install -m 0644 ${WORKDIR}/90-vfio.rules ${WORKDIR}/90-hpet.rules \
+ 	install -m 0644 ${UNPACKDIR}/90-vfio.rules ${UNPACKDIR}/90-hpet.rules \
 		${D}${sysconfdir}/udev/rules.d/
 }
