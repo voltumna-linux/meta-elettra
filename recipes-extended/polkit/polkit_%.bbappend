@@ -6,5 +6,5 @@ SRC_URI:append = " \
 
 do_install:append() {
 	# Add additional rules files
-        install -m 0644 ${WORKDIR}/10-controls-management.rules ${D}${datadir}/polkit-1/rules.d
+        install -m 0644 ${UNPACKDIR}/10-controls-management.rules ${D}${datadir}/polkit-1/rules.d
 }

@@ -12,8 +12,8 @@ SRC_URI[sha256sum] = "6bf2388cc95355858df7334142759bbd3d8c04722d7b19f03e5cb55f23
 FILES:${PN} = "${SDKPATHNATIVE}"
 do_install() {
 	install -d ${D}${SDKPATHNATIVE}/usr/share/esrf-jive/ ${D}${SDKPATHNATIVE}/usr/bin
-	install -m 0644 ${WORKDIR}/Jive-${PV}*.jar ${D}${SDKPATHNATIVE}/usr/share/esrf-jive/
-	install -m 0755 ${WORKDIR}/jive ${D}${SDKPATHNATIVE}/usr/bin
+	install -m 0644 ${UNPACKDIR}/Jive-${PV}*.jar ${D}${SDKPATHNATIVE}/usr/share/esrf-jive/
+	install -m 0755 ${UNPACKDIR}/jive ${D}${SDKPATHNATIVE}/usr/bin
 }
 
 inherit nativesdk
