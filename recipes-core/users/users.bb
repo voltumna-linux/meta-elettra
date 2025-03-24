@@ -7,21 +7,23 @@ DEPENDS:append = "bash systemd"
 USERADD_PACKAGES = "${PN}"
 USERADD_PARAM:${PN} = " \
 	--uid 10000 --user-group --groups dialout,video --no-create-home \
-	--home-dir / --shell /bin/nologin controls; \
+            --home-dir / --shell /bin/nologin controls; \
 	--uid 11000 --groups controls,dialout,video --no-create-home \
-		--home-dir /home/lorenzo.pivetta --shell /bin/bash lorenzo.pivetta; \
+            --home-dir /home/lorenzo.pivetta --shell /bin/bash lorenzo.pivetta; \
 	--uid 11001 --groups controls,dialout,video --no-create-home \
-		--home-dir /home/alessio.bogani --shell /bin/bash alessio.bogani; \
+            --home-dir /home/alessio.bogani --shell /bin/bash alessio.bogani; \
 	--uid 11002 --groups controls,dialout,video --no-create-home \
-		--home-dir /home/giulio.gaio --shell /bin/bash giulio.gaio; \
+            --home-dir /home/giulio.gaio --shell /bin/bash giulio.gaio; \
 	--uid 11003 --groups controls,dialout,video --no-create-home \
-		--home-dir /home/graziano.scalamera --shell /bin/bash graziano.scalamera; \
+            --home-dir /home/graziano.scalamera --shell /bin/bash graziano.scalamera; \
 	--uid 11004 --groups controls,dialout,video --no-create-home \
-		--home-dir /home/claudio.scafuri --shell /bin/bash claudio.scafuri; \
+            --home-dir /home/claudio.scafuri --shell /bin/bash claudio.scafuri; \
 	--uid 11005 --groups controls,dialout,video --no-create-home \
-		--home-dir /home/alessandro.abrami --shell /bin/bash alessandro.abrami; \
+            --home-dir /home/alessandro.abrami --shell /bin/bash alessandro.abrami; \
 	--uid 11006 --groups controls,dialout,video --no-create-home \
-		--home-dir /home/martin.scarcia --shell /bin/bash martin.scarcia; \
+            --home-dir /home/martin.scarcia --shell /bin/bash martin.scarcia; \
+	--uid 11008 --groups controls,dialout,video --no-create-home \
+            --home-dir /home/adriano.contillo --shell /bin/bash adriano.contillo; \
 	"
 
 # Prevents do_package failures with:
