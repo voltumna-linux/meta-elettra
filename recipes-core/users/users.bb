@@ -7,7 +7,7 @@ DEPENDS:append = "bash systemd"
 USERADD_PACKAGES = "${PN}"
 USERADD_PARAM:${PN} = " \
 	--uid 10000 --user-group --groups dialout,video --no-create-home \
-            --home-dir / --shell /bin/nologin controls; \
+            --home-dir /var/run/tango --shell /bin/nologin controls; \
 	--uid 11000 --groups controls,dialout,video --no-create-home \
             --home-dir /home/lorenzo.pivetta --shell /bin/bash lorenzo.pivetta; \
 	--uid 11001 --groups controls,dialout,video --no-create-home \
