@@ -7,7 +7,6 @@ inherit python_setuptools_build_meta
 
 SRCREV = "e29c3056ad780028ac042429c6eb86b483db3924"
 SRC_URI = "git://gitlab.com/nurbldoff/boogie.git;protocol=https;branch=main"
-S = "${WORKDIR}/git"
 
 DEPENDS += "python3-setuptools-scm-native"
 
