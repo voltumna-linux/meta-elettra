@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=84dcc94da3adb52b53ae4fa38fe49e5d"
 
 inherit python_setuptools_build_meta
 
-SRCREV = "e29c3056ad780028ac042429c6eb86b483db3924"
+SRCREV = "29e55db541320554e5f7f3e68532b30da8c0e9c8"
 SRC_URI = "git://gitlab.com/nurbldoff/boogie.git;protocol=https;branch=main"
 
 DEPENDS += "python3-setuptools-scm-native"
