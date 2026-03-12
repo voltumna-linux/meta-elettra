@@ -8,5 +8,10 @@ do_install:append() {
 	ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxbaJJtngcu0zzyigrBEbNp6eBPDTwu37fJiQJ8HAta6xqyBMqV3uli7m5c1ajO1tO9/RB0avA8sHWnrs42Xw9LbqscmZZyWj4RWehz3hZLcbLj/euZiUf0t0Md4z5MYEnjRlIqWAIq9jbvK18QLRxZVCk/DD6il9p64DjaQvz3hixsmREu/Sm6MmhraPywgg0tFJWJycyuiyvFpMBXcGTATpORYhzuYEXe5JATuWQ9iEq3e2RGVCtcIlDObpkC5GfhKxdhSDYJMwpxuEBw9Qxt3lD+IY3JEQyOvmxEwS24jNBpcLbMRKNI835WwlOak+cSIEGzy4Uo1w2NLrr8e4d lorenzo@alesia
 	__EOF__
 
-        echo "\nAuthenticationMethods publickey password" >> ${D}${sysconfdir}/ssh/sshd_config
+        echo "\n" >> ${D}${sysconfdir}/ssh/sshd_config
+        echo "AuthenticationMethods publickey password keyboard-interactive" >> ${D}${sysconfdir}/ssh/sshd_config
+        echo "ChallengeResponseAuthentication yes" >> ${D}${sysconfdir}/ssh/sshd_config
+        echo "PubkeyAuthentication yes" >> ${D}${sysconfdir}/ssh/sshd_config
+        echo "PasswordAuthentication yes" >> ${D}${sysconfdir}/ssh/sshd_config
+        echo "KbdInteractiveAuthentication yes" >> ${D}${sysconfdir}/ssh/sshd_config
 }
