@@ -1,3 +1,0 @@
-#!/bin/sh
-java -jar $(dirname $0)/../share/esrf-jive/Jive-*.jar
-
