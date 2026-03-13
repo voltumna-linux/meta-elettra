@@ -7,7 +7,9 @@ SRC_URI = " \
 	https://repo1.maven.org/maven2/org/tango-controls/Pogo/${PV}/Pogo-${PV}.jar;unpack=0 \
 	file://pogo \
 "
-SRC_URI[sha256sum] = "3c6dc44a944e7d491d58bc33020d1116f71924c9fa79d5d50a61c0c078090cc0"
+SRC_URI[sha256sum] = "ad519a2dd729489a7098a1798979791092c27f13d0d48e67635514162b51e9c9"
+
+S = "${UNPACKDIR}"
 
 FILES:${PN} = "${SDKPATHNATIVE}"
 do_install() {
