@@ -9,6 +9,8 @@ SRC_URI = " \
 "
 SRC_URI[sha256sum] = "01bc534458b9742b0dfc710d4c8fe8de105029933e705b49c53dc0f112a940ce"
 
+S = "${UNPACKDIR}"
+
 FILES:${PN} = "${SDKPATHNATIVE}"
 do_install() {
 	install -d ${D}${SDKPATHNATIVE}/usr/share/esrf-jive/ ${D}${SDKPATHNATIVE}/usr/bin

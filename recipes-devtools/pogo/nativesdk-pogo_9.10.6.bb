@@ -9,6 +9,8 @@ SRC_URI = " \
 "
 SRC_URI[sha256sum] = "d9bbe5f7cfcf15b42ba0be5c9ae046da99db1362f0fbd3fd9d9f8f4906c29592"
 
+S = "${UNPACKDIR}"
+
 FILES:${PN} = "${SDKPATHNATIVE}"
 do_install() {
 	install -d ${D}${SDKPATHNATIVE}/usr/share/esrf-pogo/ ${D}${SDKPATHNATIVE}/usr/bin

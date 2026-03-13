@@ -9,6 +9,8 @@ SRC_URI = " \
 "
 SRC_URI[sha256sum] = "ceb4767fe51a4be6026330eded1233d14c1b49abab6d52030a99875dc995d544"
 
+S = "${UNPACKDIR}"
+
 FILES:${PN} += "${SDKPATHNATIVE}"
 do_install() {
 	install -d ${D}${SDKPATHNATIVE}/usr/share/esrf-astor/ ${D}${SDKPATHNATIVE}/usr/bin
