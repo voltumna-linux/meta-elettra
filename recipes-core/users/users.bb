@@ -25,14 +25,24 @@ alessandro.abrami = "--uid 11005 --groups controls,dialout,video --no-create-hom
     --home-dir /home/alessandro.abrami --shell /bin/bash alessandro.abrami;"
 martin.scarcia = "--uid 11006 --groups controls,dialout,video --no-create-home \
     --home-dir /home/martin.scarcia --shell /bin/bash martin.scarcia;"
-adriano.contillo = "--uid 11008 --groups controls,dialout,video --no-create-home \
-    --home-dir /home/adriano.contillo --shell /bin/bash adriano.contillo;"
 igor.trovarelli = "--uid 11007 --groups controls,dialout,video --no-create-home \
     --home-dir /home/igor.trovarelli --shell /bin/bash igor.trovarelli;"
+adriano.contillo = "--uid 11008 --groups controls,dialout,video --no-create-home \
+    --home-dir /home/adriano.contillo --shell /bin/bash adriano.contillo;"
 maurizio.bossi = "--uid 11100 --groups diagnostics,dialout,video --no-create-home \
     --home-dir /home/maurizio.bossi --shell /bin/bash maurizio.bossi;"
 mauro.trovo = "--uid 11200 --groups physics,dialout,video --no-create-home \
     --home-dir /home/mauro.trovo --shell /bin/bash mauro.trovo;"
+sara.dastan = "--uid 11201 --groups physics,dialout,video --no-create-home \
+    --home-dir /home/sara.dastan --shell /bin/bash sara.dastan;"
+ivan.morozov = "--uid 11202 --groups physics,dialout,video --no-create-home \
+    --home-dir /home/ivan.morozov --shell /bin/bash ivan.morozov;"
+koryun.manukyan = "--uid 11203 --groups physics,dialout,video --no-create-home \
+    --home-dir /home/koryun.manukyan --shell /bin/bash koryun.manukyan;"
+stefano.krecic = "--uid 11204 --groups physics,dialout,video --no-create-home \
+    --home-dir /home/stefano.krecic --shell /bin/bash stefano.krecic;"
+francesco.tripaldi = "--uid 11300 --groups operators,dialout,video --no-create-home \
+    --home-dir /home/francesco.tripaldi --shell /bin/bash francesco.tripaldi;"
 
 # Prevents do_package failures with:
 # debugsources.list: No such file or directory:
