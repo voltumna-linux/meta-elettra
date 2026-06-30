@@ -1,16 +1,16 @@
 /*
- * These are necessary to let controls' group members to manage starter unit
+ * Let members of the "controls" group manage units and reboot the machine.
  */
-
 polkit.addRule(function(action, subject) {
-	if (action.id == "org.freedesktop.login1.set-wall-message") {
-		return polkit.Result.YES;
-	}
-	if (subject.isInGroup("controls")) {
-		if (action.id == "org.freedesktop.systemd1.manage-units" ||
-				action.id == "org.freedesktop.systemd1.manage-unit-files") {
-			return polkit.Result.YES;
-		}
-	}
-	return polkit.Result.NO;
+    if (!subject.isInGroup("controls")) {
+        return;   // non è affar nostro: decidano le altre regole / i default
+    }
+    if (action.id == "org.freedesktop.login1.reboot" ||
+        action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
+        action.id == "org.freedesktop.systemd1.manage-units" ||
+        action.id == "org.freedesktop.systemd1.manage-unit-files" ||
+        action.id == "org.freedesktop.login1.set-wall-message") {
+        return polkit.Result.YES;
+    }
+    // tutto il resto: fall-through, NIENTE return NO
 });
