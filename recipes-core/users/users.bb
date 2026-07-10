@@ -8,7 +8,7 @@ USERADD_PACKAGES = "${PN}"
 
 GROUPADD_PARAM:${PN} = "-g 10000 controls; -g 10100 diagnostics; -g 10200 physics; \
     -g 10300 operators;"
-USERADD_PARAM:${PN} = "--uid 10000 --groups controls,dialout,video --no-create-home \
+USERADD_PARAM:${PN} = "--uid 10000 -g controls --groups dialout,video --no-create-home \
     --home-dir /var/run/tango --shell /bin/nologin controls;"
 
 lorenzo.pivetta = "--uid 11000 --groups controls,dialout,video --no-create-home \
