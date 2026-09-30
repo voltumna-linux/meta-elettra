@@ -1,5 +1,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 SRC_URI_append += "file://tangorc.service \
 		file://tangorc.sh \
 		"
