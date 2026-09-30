@@ -2,6 +2,8 @@ EXTRA_OEMESON:append = ' \
 	-Ddns-servers="" \
 	'
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 do_install[vardeps] += "PRIMARY_NETIF"
 do_install:append() {
 	# Replace wheel with controls group to let it views logs
