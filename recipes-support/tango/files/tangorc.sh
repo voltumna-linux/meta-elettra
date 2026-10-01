@@ -4,7 +4,14 @@ mkdir -p /run/tango
 
 IPADDRESS=$(networkctl status @ETH@ | sed -ne 's/^[[:space:]]*Address:[[:space:]]*\([0-9.]*\).*/\1/p')
 
-case $(echo $IPADDRESS | cut -d"." -f3) in
+if [ -z "$IPADDRESS" ]; then
+	# Failing loudly beats writing an empty ORB endpoint:
+	# tangorc.service is Type=oneshot, the error stays in the journal.
+	echo "tangorc.sh: no IP address on @ETH@ (iface missing or networkd not active?)" >&2
+	exit 1
+fi
+
+case $(echo "$IPADDRESS" | cut -d"." -f3) in
 		204|213) TANGO_HOST=srv-tango-sre-01.ecs.elettra.trieste.it:20000;;
 		226)     TANGO_HOST=srv-tango-laser-01.fcs.elettra.trieste.it:20000;;
 		227)     TANGO_HOST=srv-tango-mag-01.fcs.elettra.trieste.it:20000;;
@@ -18,6 +25,6 @@ case $(echo $IPADDRESS | cut -d"." -f3) in
 		*)       TANGO_HOST=srv-tango-ctrl-01.elettra.trieste.it:20000;;
 esac
 
-echo TANGO_HOST=$TANGO_HOST > /run/tango/tangorc
-echo export ORBendPoint=giop:tcp:$IPADDRESS: > /run/tango/corba.sh
-echo ORBendPoint=giop:tcp:$IPADDRESS: > /run/tango/corba
+echo "TANGO_HOST=$TANGO_HOST" > /run/tango/tangorc
+echo "export ORBendPoint=giop:tcp:$IPADDRESS:" > /run/tango/corba.sh
+echo "ORBendPoint=giop:tcp:$IPADDRESS:" > /run/tango/corba
