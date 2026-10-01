@@ -7,6 +7,9 @@ SRC_URI:append = " \
 
 FILES:${PN} += "${sysconfdir}/udev/rules.d"
 
+# The udev rules use GROUP="controls": need the recipe creating the group
+RDEPENDS:${PN}:class-target += "users"
+
 do_install:append() {
  	install -d ${D}${sysconfdir}/udev/rules.d/
  	install -m 0644 ${WORKDIR}/90-vfio.rules ${WORKDIR}/90-hpet.rules \
