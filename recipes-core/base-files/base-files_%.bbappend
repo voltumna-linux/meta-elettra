@@ -1,6 +1,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-FILES:${PN} += "/runtime"
+RDEPENDS:${PN}:class-target += "users"
 
 do_install:append() {
 	# Add mountpoint for shared binaries
