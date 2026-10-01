@@ -2,8 +2,6 @@ DESCRIPTION = "This recipe adds users to an image"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
-DEPENDS:append = "bash systemd"
-
 USERADD_PACKAGES = "${PN}"
 
 GROUPADD_PARAM:${PN} = "-g 10000 controls; -g 10100 diagnostics; -g 10200 physics; \
