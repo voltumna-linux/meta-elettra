@@ -1,4 +1,4 @@
-FILES:${PN} = " \
+FILES:${PN} += " \
     ${ROOT_HOME}/.ssh \
     ${sysconfdir}/ssh/sshd_config.d \
     "
