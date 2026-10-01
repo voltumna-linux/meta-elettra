@@ -1,7 +1,7 @@
 [Unit]
 Description=Tangorc Service
 Requires=network-online.target local-fs.target
-After=network-online.target
+After=network-online.target local-fs.target
 Conflicts=shutdown.target
 
 [Service]
