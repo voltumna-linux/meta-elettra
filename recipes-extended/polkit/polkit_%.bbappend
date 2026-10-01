@@ -1,5 +1,8 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
+# The rule uses subject.isInGroup("controls"): need the recipe creating the group
+RDEPENDS_${PN}_class-target += "users"
+
 SRC_URI_append += " \
 	file://10-controls-management.rules \
 	"
