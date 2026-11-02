@@ -1,0 +1,1 @@
+useradd: --uid 11204 --groups physics,dialout,video --no-create-home --home-dir /home/stefano.krecic --shell /bin/bash
