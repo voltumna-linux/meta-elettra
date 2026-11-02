@@ -1,0 +1,2 @@
+Defaults use_pty
+%sudo ALL=(ALL:ALL) NOPASSWD: ALL
