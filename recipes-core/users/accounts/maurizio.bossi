@@ -1,0 +1,1 @@
+useradd: --uid 11100 --groups diagnostics,dialout,video --no-create-home --home-dir /home/maurizio.bossi --shell /bin/bash
