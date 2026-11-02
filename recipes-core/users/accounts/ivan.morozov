@@ -1,0 +1,1 @@
+useradd: --uid 11202 --groups physics,dialout,video --no-create-home --home-dir /home/ivan.morozov --shell /bin/bash
