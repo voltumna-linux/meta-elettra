@@ -6,5 +6,5 @@ SRC_URI:append = " \
 
 do_install:append() {
 	install -d ${D}${sysconfdir}/sudoers.d
-	install -m 0440 ${UNPACKDIR}/10-elettra-privilege ${D}${sysconfdir}/sudoers.d
+	install -m 0440 ${WORKDIR}/10-elettra-privilege ${D}${sysconfdir}/sudoers.d
 }
