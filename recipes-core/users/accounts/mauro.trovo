@@ -1,1 +1,4 @@
 useradd: --uid 11200 --groups physics,dialout,video --no-create-home --home-dir /home/mauro.trovo --shell /bin/bash
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA06IxaTrQLDeMkWtFO7IU+E5sKVa5WehY+sdRyQorE2 mauro.trovo@elettra.eu
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKzLmPQVvl1r6Yh5l/L+88ocVfuh7HdWb+q+7tQzMgwYCRV4QiYlvF9ZjLLmTTxhqtVwFZFF89zDSuDato1vWDPQuTG88aeIT8z4P+/TLuM4kGToO8ryTWUj4UL39Xu7qVVXL0cBrbFE/4Hqu9xgZ2jC0g9rPHEd2PioZIYiyYsiNLQYYEBeqHvPKCT99Qbh7dYyLx+3/2GWil6L1u4KoD+AG1n6+8yIdZ9Ucq7S+8uDvCIUQQWTxu+IUT4OS739zEhw28edndsTrTjO+nE0KJKl8K4wH24q/q2MxNVchVaCbKuCMganyBaihSRfrf70SuGFd+Xmo016zqOgIISt09 mauro.trovo@gaia
