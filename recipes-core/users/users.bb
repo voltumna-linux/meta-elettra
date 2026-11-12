@@ -51,8 +51,13 @@ def elettra_selected(d):
     import bb
     registry = elettra_registry(d)
     sudo = set(d.getVar('ELETTRA_SUDO_ACCOUNTS').split())
+    names = d.getVar('ELETTRA_ACCOUNTS').split()
+    if 'all' in names:
+        if len(names) != 1:
+            bb.fatal('ELETTRA_ACCOUNTS: "all" non e\' combinabile con altri account')
+        names = sorted(registry)
     out, seen = [], set()
-    for name in d.getVar('ELETTRA_ACCOUNTS').split():
+    for name in names:
         if name in seen:
             bb.fatal('ELETTRA_ACCOUNTS: account "%s" ripetuto' % name)
         seen.add(name)
@@ -80,7 +85,7 @@ def elettra_useradd_param(d):
         out.append('%s %s' % (param, name))
     return '; '.join(out)
 
-USERADD_PARAM:${PN} = "--uid 10000 -g controls --groups dialout,video --no-create-home \
+USERADD_PARAM_${PN} = "--uid 10000 -g controls --groups dialout,video --no-create-home \
     --home-dir /var/run/tango --shell /bin/nologin controls; ${@elettra_useradd_param(d)}"
 
 python do_install() {
