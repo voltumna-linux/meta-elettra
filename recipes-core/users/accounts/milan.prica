@@ -1,4 +1,4 @@
-useradd: --uid 11012 --groups controls,dialout,video --no-create-home --home-dir /home/milan.prica --shell /bin/bash
+useradd: --uid 11012 --groups experiments,dialout,video --no-create-home --home-dir /home/milan.prica --shell /bin/bash
 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDRxYiJN8bnneH1w98VOPKUZsLjco06QlNzx22yuBJg0Hrr43yqg2M2PjTF3MPl9qNyDRXJHKt/Er6dQILebgGKr9PY2S0ZlfnNjVabFDNhfL8NvUdxYFg1IT1Z2yjjxIRH6rUeFm3bfoknpv7UihH+4KP1+TnK+DVvHJKaw9Mdizmh46PTZgYMZnm1jfr5uP7CBcDvZBRsOsP4n6WjFKT+R7jnPSzK1GcFnZGxuGwyvLLao95Z/BXlzBINgCkJXDqRjsKc5H1hqYKCOnKKzRx2dVTMJJJrK2fbuy73hNr11CNvSvk8LVpGAMP0fB+U8zWLbkKD1CZz7nznWRUzgL2V milan@pdor.esce.elettra.trieste.it
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDG3DmXjb7QBn1fLMSpsVuJOM/uCj3WI0mUg2af8+64DYxBucafwNRKDrFCeG43gWJ2LHXia8o62NiGuXAmTrbyJLeq5J9hrBxqWzCKnQqEFndxw2pfNWN2O8Tfa2jT04KyZoOhjHBP3Yoqgoy3lpA0NBDWST8HK1DPzouV7KQIzEpXA/UGMh3NKDArVrVaQYp7tVG1UIQBTnRxMm79Kf0Bm2gj4P/78GjZzdNLFo/ysN+C1Y12XsqaNHJwgiZO9OSzvnx6xWfW9aB8MW0a3bU5BK2Gmh9BCSpOUL2ZcYsy//ANTV831V3SJ5/ltGnQOpvH/KFgJZOORbcOK1ulZccV milan@panda
