@@ -1,2 +1,6 @@
 Defaults use_pty
+
+%controls ALL=NOPASSWD: /sbin/shutdown, /sbin/reboot, \
+    /bin/systemctl ^(start|stop|restart) starter$
+
 %sudo ALL=(ALL:ALL) NOPASSWD: ALL
