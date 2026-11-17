@@ -1,6 +1,7 @@
 # Development variant of the users recipe with all users available
 require users.bb
 ELETTRA_ACCOUNTS = "all"
+ELETTRA_SUDO_ACCOUNTS = "all"
 
 # Drop-in replacement for the "users" package: it owns the same
 # /etc/ssh/authorized_keys.d/* files (plus the extra accounts), so the two

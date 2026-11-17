@@ -50,12 +50,17 @@ def elettra_registry(d):
 def elettra_selected(d):
     import bb
     registry = elettra_registry(d)
-    sudo = set(d.getVar('ELETTRA_SUDO_ACCOUNTS').split())
     names = d.getVar('ELETTRA_ACCOUNTS').split()
     if 'all' in names:
         if len(names) != 1:
             bb.fatal('ELETTRA_ACCOUNTS: "all" non e\' combinabile con altri account')
         names = sorted(registry)
+    sudo = d.getVar('ELETTRA_SUDO_ACCOUNTS').split()
+    if 'all' in sudo:
+        if len(sudo) != 1:
+            bb.fatal('ELETTRA_SUDO_ACCOUNTS: "all" non e\' combinabile con altri account')
+        sudo = names
+    sudo = set(sudo)
     out, seen = [], set()
     for name in names:
         if name in seen:
