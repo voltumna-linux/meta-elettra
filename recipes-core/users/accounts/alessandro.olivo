@@ -1,4 +1,4 @@
-useradd: --uid 11014 --groups controls,dialout,video --no-create-home --home-dir /home/alessandro.olivo --shell /bin/bash
+useradd: --uid 11014 --groups dialout,video --no-create-home --home-dir /home/alessandro.olivo --shell /bin/bash
 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvOzCf+tGP/talatOsGRUg5W+rMj8ELUdAUnr6+JMZbfuUGwGTDUpDMjT1dQh/Yuq+v6ld7DI1yLukb65YNNgxybmPS679OwLWANlav1WWYiqPy4ZsZFTVS8nFwE1MMYocBOr7Y2nI9257SIKUs7FJG3gCZkbRrIGeCRQcUXrZLk1xqJ3bTtWNEEbdCCqj3m7dd0/8c9M914raLGNE8dU1qMB4iNP+CgNABJJEEH72W9pHwAF/jpg689QvaySh08Z11GCqIBWTCpGzj3gNr05Y4PBt74JGrKKezEiT2IAH6kPxZScxJrktwwsq6M5AqHbtsrMTpmLoE2qxV8rphgml alessandro.olivo@kenng64
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6EILVYLMm+2Oa1mEJOrtMEmLldk1YUgo/V2pjOrYDlS1o9Nc5DrdsXUHt9T6i5teTU3JuE3Ex9eSncfdj9I64JtaWQtUMyeFZ51nytpge/hwUQ1a5KbqtfXfE21c1HwUZcib2JE0Wm0k5l9NiC0Ak3PfNP1coy/uNfdIGcRb32L70P/3iAe8+C8+GK5vuLY0L8vkqS/7bNmT8sbHn2XTb0vwlu4a4LcSfB2pFT9xkfLx33GEHw0xkQ8XmD1ueLHD6VyHt5jqopa3pbRNx//lwOKUQyUP+Q0D4KOCS0qnboIcDqPq9A8OtlyeF2hMHAYUHe3OLwsjZVCtWX6TxlsPP alessandro@pc-olivo
